@@ -1,0 +1,92 @@
+{
+  "plugins": {
+    "conform.nvim": {
+      "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
+      "src": "https://github.com/stevearc/conform.nvim",
+      "version": "'v9.1.0'"
+    },
+    "fidget.nvim": {
+      "rev": "b61e8af9b8b68ee0ec7da5fb7a8c203aae854f2e",
+      "src": "https://github.com/j-hui/fidget.nvim",
+      "version": "'v1.6.1'"
+    },
+    "gp.nvim": {
+      "rev": "e6a01e9788dbc7c09df6ffe47b6d15d1cb455de8",
+      "src": "https://github.com/robitx/gp.nvim",
+      "version": "'v3.9.0'"
+    },
+    "killring.nvim": {
+      "rev": "0182d3265c745d54259a7fea47ca3a5544a1bb20",
+      "src": "https://github.com/sunesimonsen/killring.nvim"
+    },
+    "lazydev.nvim": {
+      "rev": "01bc2aacd51cf9021eb19d048e70ce3dd09f7f93",
+      "src": "https://github.com/folke/lazydev.nvim",
+      "version": "'v1.10.0'"
+    },
+    "marksman": {
+      "rev": "4340227338f8d2b369bf38d19f029f1effb532f6",
+      "src": "https://github.com/artempyanykh/marksman",
+      "version": "'2026-02-08'"
+    },
+    "mason-lspconfig.nvim": {
+      "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
+      "src": "https://github.com/williamboman/mason-lspconfig.nvim",
+      "version": "'25f609e7fca78af7cede4f9fa3af8a94b1c4950b'"
+    },
+    "mason-tool-installer.nvim": {
+      "rev": "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
+      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+      "version": "'517ef5994ef9d6b738322664d5fdd948f0fdeb46'"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "https://github.com/williamboman/mason.nvim",
+      "version": "'v2.2.1'"
+    },
+    "mini.nvim": {
+      "rev": "a995fe9cd4193fb492b5df69175a351a74b3d36b",
+      "src": "https://github.com/nvim-mini/mini.nvim",
+      "version": "'v0.17.0'"
+    },
+    "notes.nvim": {
+      "rev": "24ce1b0ff57e3a3e38395c882a8aa65898739878",
+      "src": "https://github.com/sunesimonsen/notes.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "0203a9608d63eda57679b01e69f33a7b4c34b0d1",
+      "src": "https://github.com/neovim/nvim-lspconfig",
+      "version": "'v2.7.0'"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'4916d6592ede8c07973490d9322f187e07dfefac'"
+    },
+    "nvim-treesitter-textobjects": {
+      "rev": "93d60a475f0b08a8eceb99255863977d3a25f310",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "version": "'93d60a475f0b08a8eceb99255863977d3a25f310'"
+    },
+    "oil.nvim": {
+      "rev": "975a77cce3c8cb742bc1b3629f4328f5ca977dad",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": "'v2.15.0'"
+    },
+    "project.nvim": {
+      "rev": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb",
+      "src": "https://github.com/DrKJeff16/project.nvim",
+      "version": "'8c6bad7d22eef1b71144b401c9f74ed01526a4fb'"
+    },
+    "typos.nvim": {
+      "rev": "9315badebfe72efd8020ae7b1d2f176903ea6794",
+      "src": "https://github.com/poljar/typos.nvim",
+      "version": "'9315badebfe72efd8020ae7b1d2f176903ea6794'"
+    },
+    "vim-sleuth": {
+      "rev": "1d25e8e5dc4062e38cab1a461934ee5e9d59e5a8",
+      "src": "https://github.com/tpope/vim-sleuth",
+      "version": "'v2.0'"
+    }
+  }
+}
