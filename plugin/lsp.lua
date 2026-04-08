@@ -15,11 +15,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup()
 require('fidget').setup {}
-require('mason-lspconfig').setup {}
-require('mason-tool-installer').setup {
-  ensure_installed = {
-    'lua_ls',
-    'stylua',
-    'ts_ls',
-  },
-}
+require('mason-lspconfig').setup()
