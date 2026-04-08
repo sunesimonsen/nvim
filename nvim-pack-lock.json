@@ -19,11 +19,6 @@
       "rev": "0182d3265c745d54259a7fea47ca3a5544a1bb20",
       "src": "https://github.com/sunesimonsen/killring.nvim"
     },
-    "lazydev.nvim": {
-      "rev": "01bc2aacd51cf9021eb19d048e70ce3dd09f7f93",
-      "src": "https://github.com/folke/lazydev.nvim",
-      "version": "'v1.10.0'"
-    },
     "marksman": {
       "rev": "4340227338f8d2b369bf38d19f029f1effb532f6",
       "src": "https://github.com/artempyanykh/marksman",
@@ -31,17 +26,17 @@
     },
     "mason-lspconfig.nvim": {
       "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
-      "src": "https://github.com/williamboman/mason-lspconfig.nvim",
-      "version": "'25f609e7fca78af7cede4f9fa3af8a94b1c4950b'"
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim",
+      "version": "'v2.1.0'"
     },
     "mason-tool-installer.nvim": {
-      "rev": "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
+      "rev": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc",
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
-      "version": "'517ef5994ef9d6b738322664d5fdd948f0fdeb46'"
+      "version": "'443f1ef8b5e6bf47045cb2217b6f748a223cf7dc'"
     },
     "mason.nvim": {
       "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
-      "src": "https://github.com/williamboman/mason.nvim",
+      "src": "https://github.com/mason-org/mason.nvim",
       "version": "'v2.2.1'"
     },
     "mini.nvim": {
@@ -74,9 +69,9 @@
       "version": "'v2.15.0'"
     },
     "project.nvim": {
-      "rev": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb",
+      "rev": "c16e462238fe690a61f2db48d7861dcb97b8923a",
       "src": "https://github.com/DrKJeff16/project.nvim",
-      "version": "'8c6bad7d22eef1b71144b401c9f74ed01526a4fb'"
+      "version": "'v2.0.0-1'"
     },
     "typos.nvim": {
       "rev": "9315badebfe72efd8020ae7b1d2f176903ea6794",

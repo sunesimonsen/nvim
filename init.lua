@@ -27,15 +27,15 @@ vim.pack.add {
   { src = 'https://github.com/stevearc/oil.nvim', version = 'v2.15.0' },
 
   -- Projects
-  { src = 'https://github.com/DrKJeff16/project.nvim', version = '8c6bad7d22eef1b71144b401c9f74ed01526a4fb' },
-  --{ src = 'https://github.com/DrKJeff16/project.nvim', version = 'v2.0.0-1' },
+  { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v2.0.0-1' },
 
   -- LSP
   { src = 'https://github.com/artempyanykh/marksman', version = '2026-02-08' },
-  { src = 'https://github.com/williamboman/mason.nvim', version = 'v2.2.1' },
-  { src = 'https://github.com/williamboman/mason-lspconfig.nvim', version = '25f609e7fca78af7cede4f9fa3af8a94b1c4950b' },
-  { src = 'https://github.com/j-hui/fidget.nvim', version = 'v1.6.1' },
   { src = 'https://github.com/neovim/nvim-lspconfig', version = 'v2.7.0' },
+  { src = 'https://github.com/mason-org/mason.nvim', version = 'v2.2.1' },
+  { src = 'https://github.com/mason-org/mason-lspconfig.nvim', version = 'v2.1.0' },
+  { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim', version = '443f1ef8b5e6bf47045cb2217b6f748a223cf7dc' },
+  { src = 'https://github.com/j-hui/fidget.nvim', version = 'v1.6.1' },
 
   -- Tree sitter
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = '4916d6592ede8c07973490d9322f187e07dfefac' },

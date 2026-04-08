@@ -1,4 +1,4 @@
-require('project_nvim').setup {
+require('project').setup {
   detection_methods = { 'pattern' },
   patterns = { '.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', '.project' },
   scope_chdir = 'tab',
@@ -55,7 +55,7 @@ local function get_file_name(path)
 end
 
 MiniPick.registry.project = function()
-  local projects = require('project_nvim').get_recent_projects()
+  local projects = require('project').get_recent_projects()
 
   local items = {}
 
