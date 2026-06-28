@@ -93,10 +93,6 @@ vim.opt.updatetime = 250
 -- Fuzzy auto completion
 vim.opt.completeopt = 'menuone,noinsert,fuzzy'
 
--- get contents of visual selection
--- handle unpack deprecation
-table.unpack = table.unpack or unpack
-
 local function get_visual()
   local _, ls, cs = table.unpack(vim.fn.getpos 'v')
   local _, le, ce = table.unpack(vim.fn.getpos '.')
@@ -112,8 +108,8 @@ vim.keymap.set('v', '<C-r>', function()
   -- escape regex and line endings
   pattern = vim.fn.substitute(vim.fn.escape(pattern, '^$.*\\/~[]'), '\n', '\\n', 'g')
   -- send parsed substitution command to command line
-  vim.api.nvim_input('<Esc>:.,$s/' .. pattern .. '//gc<Left><Left><Left>')
-end)
+  vim.api.nvim_input('<Esc>:.,$s/' .. pattern .. '//gci<Left><Left><Left><Left>')
+end, { desc = 'Replace selection' })
 
 -- Center on page jumps
 vim.keymap.set('n', '<C-u>', '<C-u>zz')

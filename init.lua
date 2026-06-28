@@ -23,9 +23,6 @@ vim.pack.add {
   -- Everything from mini.nvim
   { src = 'https://github.com/nvim-mini/mini.nvim', version = 'v0.17.0' },
 
-  -- Files
-  { src = 'https://github.com/stevearc/oil.nvim', version = 'v2.15.0' },
-
   -- Projects
   { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v2.0.0-1' },
 
