@@ -50,31 +50,29 @@ vim.keymap.set('n', '<leader>fd', ':Pick explorer cwd="%:p:h"<cr>', { desc = 'Br
 
 vim.keymap.set('n', '<leader>pd', ':Pick explorer<cr>', { desc = 'Browse project dir' })
 
-local function get_file_name(path)
-  return path:match '([^/\\]+)$'
-end
-
 MiniPick.registry.project = function()
   local projects = require('project').get_recent_projects()
 
-  local items = {}
+  local sorted_projects = {}
 
-  for _, value in pairs(projects) do
-    if not string.find(value['path'], '/node_modules/') then
-      table.insert(items, value['path'])
+  for _, project in pairs(projects) do
+    if not string.find(project['path'], '/node_modules/') then
+      table.insert(sorted_projects, project)
     end
   end
 
-  table.sort(items, function(a, b)
-    return string.lower(a) < string.lower(b)
+  table.sort(sorted_projects, function(a, b)
+    return string.lower(a['name']) < string.lower(b['name'])
   end)
 
-  vim.ui.select(items, {
+  vim.ui.select(sorted_projects, {
     prompt = 'Project:',
-    format_item = get_file_name,
-  }, function(path)
-    if path then
-      MiniPick.builtin.files(nil, { source = { cwd = path } })
+    format_item = function(project)
+      return project['name']
+    end,
+  }, function(project)
+    if project then
+      MiniPick.builtin.files(nil, { source = { cwd = project['path'] } })
     else
       vim.notify('No project selected', vim.log.levels.WARN)
     end
