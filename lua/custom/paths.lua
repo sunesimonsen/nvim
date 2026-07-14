@@ -1,7 +1,7 @@
 local M = {}
 
 M.get_project_path = function()
-  return require('project_nvim.project').find_pattern_root()
+  return require('project').current_root()
 end
 
 local function find_git_root()
@@ -14,7 +14,7 @@ M.get_git_path = function()
   if ok then
     return path
   else
-    M.get_project_path()
+    return M.get_project_path()
   end
 end
 

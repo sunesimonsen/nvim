@@ -24,7 +24,10 @@ vim.pack.add {
   { src = 'https://github.com/nvim-mini/mini.nvim', version = 'v0.17.0' },
 
   -- Projects
-  { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v2.0.0-1' },
+  { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v5.1.1-1' },
+
+  -- Files
+  { src = 'https://github.com/stevearc/oil.nvim', version = 'v2.16.0' },
 
   -- LSP
   { src = 'https://github.com/artempyanykh/marksman', version = '2026-02-08' },

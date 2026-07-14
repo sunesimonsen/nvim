@@ -1,6 +1,6 @@
 require('project').setup {
   detection_methods = { 'pattern' },
-  patterns = { '.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', '.project' },
+  patterns = { '.git', 'Makefile', 'package.json', '.project' },
   scope_chdir = 'tab',
 }
 
@@ -60,8 +60,8 @@ MiniPick.registry.project = function()
   local items = {}
 
   for _, value in pairs(projects) do
-    if not string.find(value, '/node_modules/') then
-      table.insert(items, value)
+    if not string.find(value['path'], '/node_modules/') then
+      table.insert(items, value['path'])
     end
   end
 

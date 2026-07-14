@@ -58,10 +58,15 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
       "version": "'93d60a475f0b08a8eceb99255863977d3a25f310'"
     },
+    "oil.nvim": {
+      "rev": "17c0a8faaf48298a0c0cfb0d757c0eaee4ff7a32",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": "'v2.16.0'"
+    },
     "project.nvim": {
-      "rev": "c16e462238fe690a61f2db48d7861dcb97b8923a",
+      "rev": "b46bdf191bcfe4092e406d6117fd9a236383a4c6",
       "src": "https://github.com/DrKJeff16/project.nvim",
-      "version": "'v2.0.0-1'"
+      "version": "'v5.1.1-1'"
     },
     "typos.nvim": {
       "rev": "9315badebfe72efd8020ae7b1d2f176903ea6794",
