@@ -93,6 +93,10 @@ vim.opt.updatetime = 250
 -- Fuzzy auto completion
 vim.opt.completeopt = 'menuone,noinsert,fuzzy'
 
+if not table.unpack then
+  table.unpack = unpack
+end
+
 local function get_visual()
   local _, ls, cs = table.unpack(vim.fn.getpos 'v')
   local _, le, ce = table.unpack(vim.fn.getpos '.')
