@@ -10,11 +10,6 @@
       "src": "https://github.com/j-hui/fidget.nvim",
       "version": "'v1.6.1'"
     },
-    "gp.nvim": {
-      "rev": "e6a01e9788dbc7c09df6ffe47b6d15d1cb455de8",
-      "src": "https://github.com/robitx/gp.nvim",
-      "version": "'v3.9.0'"
-    },
     "killring.nvim": {
       "rev": "0182d3265c745d54259a7fea47ca3a5544a1bb20",
       "src": "https://github.com/sunesimonsen/killring.nvim"
@@ -40,8 +35,8 @@
       "version": "'v0.17.0'"
     },
     "notes.nvim": {
-      "rev": "24ce1b0ff57e3a3e38395c882a8aa65898739878",
-      "src": "https://github.com/sunesimonsen/notes.nvim"
+      "rev": "a24bc22ef9f0d51292eb7b71d3030854b4a15485",
+      "src": "~/Code/nvim/notes.nvim"
     },
     "nvim-lspconfig": {
       "rev": "0203a9608d63eda57679b01e69f33a7b4c34b0d1",
@@ -67,11 +62,6 @@
       "rev": "b46bdf191bcfe4092e406d6117fd9a236383a4c6",
       "src": "https://github.com/DrKJeff16/project.nvim",
       "version": "'v5.1.1-1'"
-    },
-    "typos.nvim": {
-      "rev": "9315badebfe72efd8020ae7b1d2f176903ea6794",
-      "src": "https://github.com/poljar/typos.nvim",
-      "version": "'9315badebfe72efd8020ae7b1d2f176903ea6794'"
     },
     "vim-sleuth": {
       "rev": "1d25e8e5dc4062e38cab1a461934ee5e9d59e5a8",

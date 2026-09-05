@@ -68,8 +68,6 @@ require('mini.ai').setup {
 require('killring').setup()
 vim.keymap.set('n', '<leader>yy', ':KillRing<CR>', { desc = 'View yank history' })
 
-require('typos').setup()
-
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`

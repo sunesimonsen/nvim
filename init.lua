@@ -46,11 +46,8 @@ vim.pack.add {
 
   -- Editing
   'https://github.com/sunesimonsen/killring.nvim',
-  { src = 'https://github.com/poljar/typos.nvim', version = '9315badebfe72efd8020ae7b1d2f176903ea6794' },
 
   -- Notes
   'https://github.com/sunesimonsen/notes.nvim',
-
-  -- AI
-  { src = 'https://github.com/robitx/gp.nvim', version = 'v3.9.0' },
+  --'~/Code/nvim/notes.nvim',
 }

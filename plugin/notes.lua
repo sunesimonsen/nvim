@@ -1,17 +1,17 @@
 require('notes').setup {
-  dir = '~/.notes',
+  dir = '~/.local/state/notes',
 }
 
 local findNotes = function()
   local notes = require 'notes'
 
-  MiniPick.builtin.files(nil, { source = { cwd = notes.dir } })
+  require('mini.pick').builtin.files(nil, { source = { cwd = notes.dir } })
 end
 
 local searchNotes = function()
   local notes = require 'notes'
 
-  MiniPick.builtin.grep_live(nil, { source = { cwd = notes.dir } })
+  require('mini.pick').builtin.grep_live(nil, { source = { cwd = notes.dir } })
 end
 
 vim.keymap.set('n', '<leader>nn', findNotes, { desc = 'Find note' })
