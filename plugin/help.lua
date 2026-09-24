@@ -87,6 +87,7 @@ miniclue.setup {
     { mode = 'n', keys = '<leader>w', desc = '+Windows' },
     { mode = 'n', keys = '<leader>x', desc = '+Execute' },
     { mode = 'n', keys = '<leader>y', desc = '+Yank' },
+    { mode = 'n', keys = '<leader>yp', desc = '+Path' },
     { mode = 'v', keys = '<leader>ac', desc = '+Chat' },
     { mode = 'x', keys = '<Leader>mh', postkeys = '<Leader>m' },
     { mode = 'x', keys = '<Leader>mj', postkeys = '<Leader>m' },

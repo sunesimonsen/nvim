@@ -17,3 +17,8 @@ vim.keymap.set('n', '<leader>dg', function()
 end, { desc = 'Open git directory' })
 
 vim.keymap.set('n', '<leader>fn', ':e %:p:h/', { desc = 'New file' })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>ypr', ':CopyFilePath<CR>', { desc = 'Copy relative file path to the clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ypn', ':CopyFileName<CR>', { desc = 'Copy just the file name to the clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ypa', ':CopyAbsoluteFilePath<CR>', { desc = 'Copy absolute file path to the clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>yph', ':CopyRelativeFilePathFromHome<CR>', { desc = 'Copy relative file path from $HOME to the clipboard' })

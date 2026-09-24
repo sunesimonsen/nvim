@@ -28,6 +28,7 @@ vim.pack.add {
 
   -- Files
   { src = 'https://github.com/stevearc/oil.nvim', version = 'v2.16.0' },
+  { src = 'https://github.com/h3pei/copy-file-path.nvim', version = 'v0.0.5' },
 
   -- LSP
   { src = 'https://github.com/artempyanykh/marksman', version = '2026-02-08' },
