@@ -57,7 +57,6 @@ miniclue.setup {
     miniclue.gen_clues.z(),
 
     { mode = 'n', keys = '<leader>a', desc = '+AI' },
-    { mode = 'n', keys = '<leader>ac', desc = '+Chat' },
     { mode = 'n', keys = '<leader>b', desc = '+Buffers' },
     { mode = 'n', keys = '<Leader>b', desc = '+Buffers' },
     { mode = 'n', keys = '<leader>c', desc = '+Code' },
