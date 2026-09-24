@@ -23,6 +23,11 @@ vim.keymap.set('n', '<leader>nc', ':Notes create<CR>', { desc = 'Create note' })
 vim.keymap.set('n', '<leader>nl', ':Notes link_to_note<CR>', { desc = 'Link to note' })
 vim.keymap.set('n', '<leader>nr', ':Notes retitle<CR>', { desc = 'Retitle note' })
 vim.keymap.set('n', '<leader>nt', ':Notes toggle_tag<CR>', { desc = 'Toggle tag' })
+vim.keymap.set('n', '<leader>nu', function()
+  local notes = require 'notes'
+  vim.cmd('!cd ' .. notes.dir .. '; git-sync')
+end, { desc = 'Sync changes' })
+
 vim.keymap.set('n', '<leader>ni', function()
   local notes = require 'notes'
   vim.cmd('edit ' .. vim.fn.expand(notes.dir .. '/*--inbox__*'))
