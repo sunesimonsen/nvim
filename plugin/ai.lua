@@ -23,6 +23,25 @@ end
 
 vim.keymap.set({ 'n', 'v' }, '<leader>ae', open_prompt, { desc = 'Open project prompt' })
 
+local function append_to_prompt(path, entry)
+  local prompt_buf = vim.fn.bufnr(path)
+
+  if prompt_buf ~= -1 and vim.api.nvim_buf_is_loaded(prompt_buf) and vim.bo[prompt_buf].modified then
+    local line_count = vim.api.nvim_buf_line_count(prompt_buf)
+    local buffer_lines = vim.api.nvim_buf_get_lines(prompt_buf, 0, line_count, false)
+
+    if line_count == 1 and buffer_lines[1] == '' then
+      vim.api.nvim_buf_set_lines(prompt_buf, 0, 1, false, { entry })
+    else
+      vim.api.nvim_buf_set_lines(prompt_buf, line_count, line_count, false, { entry })
+    end
+  else
+    local lines = vim.fn.readfile(path)
+    table.insert(lines, entry)
+    vim.fn.writefile(lines, path)
+  end
+end
+
 local function append_file_path()
   local git_path, path = prompt_path()
   local file_path = vim.api.nvim_buf_get_name(0)
@@ -47,22 +66,17 @@ local function append_file_path()
     entry = string.format('%s:%d-%d', entry, math.min(start_line, end_line), math.max(start_line, end_line))
   end
 
-  local prompt_buf = vim.fn.bufnr(path)
-
-  if prompt_buf ~= -1 and vim.api.nvim_buf_is_loaded(prompt_buf) and vim.bo[prompt_buf].modified then
-    local line_count = vim.api.nvim_buf_line_count(prompt_buf)
-    local buffer_lines = vim.api.nvim_buf_get_lines(prompt_buf, 0, line_count, false)
-
-    if line_count == 1 and buffer_lines[1] == '' then
-      vim.api.nvim_buf_set_lines(prompt_buf, 0, 1, false, { entry })
-    else
-      vim.api.nvim_buf_set_lines(prompt_buf, line_count, line_count, false, { entry })
+  vim.ui.input({ prompt = 'AI prompt: ' }, function(input)
+    if input == nil then
+      return
     end
-  else
-    local lines = vim.fn.readfile(path)
-    table.insert(lines, entry)
-    vim.fn.writefile(lines, path)
-  end
+
+    if input ~= '' then
+      entry = string.format('%s %s', input, entry)
+    end
+
+    append_to_prompt(path, entry)
+  end)
 end
 
-vim.keymap.set({ 'n', 'v' }, '<leader>ap', append_file_path, { desc = 'Append file path and open AI prompt' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ap', append_file_path, { desc = 'Prompt for change' })
