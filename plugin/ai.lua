@@ -26,7 +26,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ae', open_prompt, { desc = 'Open project p
 local function append_to_prompt(path, entry)
   local prompt_buf = vim.fn.bufnr(path)
 
-  if prompt_buf ~= -1 and vim.api.nvim_buf_is_loaded(prompt_buf) and vim.bo[prompt_buf].modified then
+  if prompt_buf ~= -1 and vim.api.nvim_buf_is_loaded(prompt_buf) then
     local line_count = vim.api.nvim_buf_line_count(prompt_buf)
     local buffer_lines = vim.api.nvim_buf_get_lines(prompt_buf, 0, line_count, false)
 
@@ -35,6 +35,10 @@ local function append_to_prompt(path, entry)
     else
       vim.api.nvim_buf_set_lines(prompt_buf, line_count, line_count, false, { entry })
     end
+
+    vim.api.nvim_buf_call(prompt_buf, function()
+      vim.cmd.write()
+    end)
   else
     local lines = vim.fn.readfile(path)
     table.insert(lines, entry)
@@ -60,7 +64,7 @@ local function append_file_path()
 
   local mode = vim.fn.mode()
 
-  if mode == 'v' or mode == 'V' or mode == '\22' then
+  if mode == 'v' or mode == 'V' then
     local start_line = vim.fn.line "'<"
     local end_line = vim.fn.line "'>"
     entry = string.format('%s:%d-%d', entry, math.min(start_line, end_line), math.max(start_line, end_line))
