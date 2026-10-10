@@ -1,3 +1,5 @@
+vim.opt.swapfile = false
+
 require('mini.completion').setup {
   delay = { info = 500, signature = 500 },
   lsp_completion = {
