@@ -64,9 +64,9 @@ local function append_file_path()
 
   local mode = vim.fn.mode()
 
-  if mode == 'v' or mode == 'V' then
-    local start_line = vim.fn.line "'<"
-    local end_line = vim.fn.line "'>"
+  if mode == 'v' or mode == 'V' or mode == '\22' then
+    local start_line = vim.fn.line 'v'
+    local end_line = vim.fn.line '.'
     entry = string.format('%s:%d-%d', entry, math.min(start_line, end_line), math.max(start_line, end_line))
   end
 
