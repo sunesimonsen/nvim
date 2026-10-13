@@ -106,24 +106,60 @@ vim.keymap.set('n', '<leader>gh', ':Pick git_hunks<cr>', { desc = 'Unstaged' })
 
 vim.keymap.set('n', '<leader>yr', ':Pick registers<cr>', { desc = 'Yank register' })
 
-local git_status = function()
-  local output = vim.fn.system 'TERM=dumb git status -s'
-  local lines = vim.split(vim.fn.trim(output, '', 2), '\n')
-  local result = {}
-
-  for _, line in ipairs(lines) do
-    if string.match(line, '^ *[AM?]') then
-      table.insert(result, line)
+MiniPick.registry.git_status = function()
+  local output = vim.fn.system { 'git', 'status', '--porcelain' }
+  local items = {}
+  for _, line in ipairs(vim.split(output, '\n')) do
+    if line ~= '' then
+      table.insert(items, line)
     end
   end
 
-  return result
+  local get_path = function(item)
+    local path = item:sub(4)
+    -- Renames are reported as "old -> new"; follow the new path
+    return path:match '^(.*) -> ' or path
+  end
+
+  local choose = function(item)
+    if item == nil then
+      return
+    end
+    -- Schedule so the edit happens after the picker window is closed;
+    -- otherwise the file is opened in (and lost with) the picker float
+    vim.schedule(function()
+      vim.cmd('edit ' .. vim.fn.fnameescape(get_path(item)))
+    end)
+  end
+
+  local preview = function(buf_id, item)
+    if item == nil then
+      return
+    end
+
+    local path = get_path(item)
+    local lines = {}
+    if not item:match '^%?%?' then
+      -- Show both staged and unstaged changes against HEAD
+      lines = vim.fn.systemlist { 'git', 'diff', 'HEAD', '--', path }
+    end
+
+    -- Untracked files (and tracked files without changes) have no diff;
+    -- fall back to showing the file content
+    if vim.tbl_isempty(lines) then
+      local ok, contents = pcall(vim.fn.readfile, path)
+      lines = ok and contents or { 'Could not read ' .. path }
+      vim.bo[buf_id].filetype = vim.filetype.match { filename = path } or 'text'
+    else
+      vim.bo[buf_id].filetype = 'diff'
+    end
+
+    vim.api.nvim_buf_set_lines(buf_id, 0, -1, false, lines)
+  end
+
+  MiniPick.start {
+    source = { items = items, name = 'Git status', choose = choose, preview = preview },
+  }
 end
 
-vim.keymap.set('n', '<leader>gs', function()
-  vim.ui.select(git_status(), {}, function(choice)
-    if choice then
-      vim.cmd('e ' .. string.sub(choice, 4))
-    end
-  end)
-end, { desc = 'Git status' })
+vim.keymap.set('n', '<leader>gs', ':Pick git_status<cr>', { desc = 'Git status' })
