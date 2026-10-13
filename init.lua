@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add {
   -- Everything from mini.nvim
-  { src = 'https://github.com/nvim-mini/mini.nvim', version = 'v0.17.0' },
+  { src = 'https://github.com/nvim-mini/mini.nvim', version = 'v0.18.0' },
 
   -- Projects
   { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v5.1.1-1' },
@@ -34,7 +34,7 @@ vim.pack.add {
   { src = 'https://github.com/artempyanykh/marksman', version = '2026-02-08' },
   { src = 'https://github.com/neovim/nvim-lspconfig', version = 'v2.7.0' },
   { src = 'https://github.com/mason-org/mason.nvim', version = 'v2.2.1' },
-  { src = 'https://github.com/mason-org/mason-lspconfig.nvim', version = 'v2.1.0' },
+  { src = 'https://github.com/mason-org/mason-lspconfig.nvim', version = 'v2.2.0' },
   { src = 'https://github.com/j-hui/fidget.nvim', version = 'v1.6.1' },
 
   -- Tree sitter

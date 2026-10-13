@@ -27,7 +27,7 @@
     "mason-lspconfig.nvim": {
       "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim",
-      "version": "'v2.1.0'"
+      "version": "'v2.2.0'"
     },
     "mason.nvim": {
       "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
@@ -37,7 +37,7 @@
     "mini.nvim": {
       "rev": "a995fe9cd4193fb492b5df69175a351a74b3d36b",
       "src": "https://github.com/nvim-mini/mini.nvim",
-      "version": "'v0.17.0'"
+      "version": "'v0.18.0'"
     },
     "notes.nvim": {
       "rev": "a24bc22ef9f0d51292eb7b71d3030854b4a15485",
