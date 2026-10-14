@@ -1,5 +1,8 @@
-require('mini.diff').setup()
-require('mini.git').setup()
+local MiniGit = require 'mini.git'
+local MiniDiff = require 'mini.diff'
+
+MiniDiff.setup()
+MiniGit.setup()
 
 vim.keymap.set('n', '<leader>go', MiniDiff.toggle_overlay, { desc = 'Toggle diff overlay' })
 vim.keymap.set('n', '<leader>ga', ':Git add %<cr>', { desc = 'Git add file' })

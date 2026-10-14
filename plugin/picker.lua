@@ -4,7 +4,8 @@ require('project').setup {
   scope_chdir = 'tab',
 }
 
-require('mini.pick').setup()
+local MiniPick = require 'mini.pick'
+MiniPick.setup()
 require('mini.extra').setup()
 
 local paths = require 'custom.paths'
