@@ -5,4 +5,5 @@ vim.keymap.set('n', '<leader>go', MiniDiff.toggle_overlay, { desc = 'Toggle diff
 vim.keymap.set('n', '<leader>ga', ':Git add %<cr>', { desc = 'Git add file' })
 vim.keymap.set('n', '<leader>gc', ':Git commit<cr>', { desc = 'Git commit' })
 vim.keymap.set('n', '<leader>gx', ':Git ', { desc = 'Git command' })
+vim.keymap.set('v', '<leader>gl', MiniGit.show_range_history, { desc = 'History for range' })
 vim.keymap.set({ 'n', 'v' }, 'gs', MiniGit.show_at_cursor, { desc = 'Git show' })
