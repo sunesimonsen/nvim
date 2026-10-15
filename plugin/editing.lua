@@ -13,6 +13,10 @@ require('mini.jump').setup()
 
 local jump2d = require 'mini.jump2d'
 jump2d.setup {
+  allowed_lines = {
+    blank = false, -- Blank line (not sent to spotter even if `true`)
+    cursor_at = false, -- Cursor line
+  },
   mappings = {
     start_jumping = '',
   },
