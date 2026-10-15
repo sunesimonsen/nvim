@@ -35,7 +35,6 @@ vim.keymap.set('n', '<leader>sc', ':Pick commands<cr>', { desc = 'Search command
 
 vim.keymap.set('n', '<leader>qs', ":Pick list scope='quickfix'<cr>", { desc = 'Search quickfixes' })
 
--- Slightly advanced example of overriding default behavior and theme
 vim.keymap.set('n', '<leader>ss', ":Pick buf_lines scope='current'<cr>", { desc = 'Search buffer' })
 
 vim.keymap.set('n', '<leader>ff', ':Pick files<cr>', { desc = 'Search project files' })
