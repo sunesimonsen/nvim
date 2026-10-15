@@ -14,5 +14,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 require('mason').setup()
-require('fidget').setup {}
 require('mason-lspconfig').setup()

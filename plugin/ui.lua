@@ -4,6 +4,8 @@ require('mini.statusline').setup {
   use_icons = true,
 }
 
+require('mini.notify').setup()
+
 -- Make line numbers default
 vim.opt.number = false
 -- You can also add relative line numbers, to help with jumping.

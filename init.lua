@@ -35,7 +35,6 @@ vim.pack.add {
   { src = 'https://github.com/neovim/nvim-lspconfig', version = 'v2.7.0' },
   { src = 'https://github.com/mason-org/mason.nvim', version = 'v2.2.1' },
   { src = 'https://github.com/mason-org/mason-lspconfig.nvim', version = 'v2.2.0' },
-  { src = 'https://github.com/j-hui/fidget.nvim', version = 'v1.6.1' },
 
   -- Tree sitter
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = '4916d6592ede8c07973490d9322f187e07dfefac' },

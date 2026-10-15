@@ -10,11 +10,6 @@
       "src": "https://github.com/h3pei/copy-file-path.nvim",
       "version": "'v0.0.5'"
     },
-    "fidget.nvim": {
-      "rev": "b61e8af9b8b68ee0ec7da5fb7a8c203aae854f2e",
-      "src": "https://github.com/j-hui/fidget.nvim",
-      "version": "'v1.6.1'"
-    },
     "killring.nvim": {
       "rev": "0182d3265c745d54259a7fea47ca3a5544a1bb20",
       "src": "https://github.com/sunesimonsen/killring.nvim"
