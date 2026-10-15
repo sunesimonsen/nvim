@@ -9,6 +9,7 @@ require('mini.completion').setup {
   },
 }
 
+require('mini.splitjoin').setup()
 require('mini.jump').setup()
 
 local jump2d = require 'mini.jump2d'
