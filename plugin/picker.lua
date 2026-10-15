@@ -106,7 +106,11 @@ vim.keymap.set('n', '<leader>gb', ':Pick git_branches<cr>', { desc = 'Branches' 
 vim.keymap.set('n', '<leader>gl', ":Pick git_commits path='%'<cr>", { desc = 'File commits' })
 vim.keymap.set('n', '<leader>gL', ':Pick git_commits<cr>', { desc = 'Commits' })
 vim.keymap.set('n', '<leader>gh', ':Pick git_hunks<cr>', { desc = 'Unstaged' })
---vim.keymap.set('n', '<leader>gf', ':Pick git_files scope="modified"<cr>', { desc = 'Unstaged' })
+vim.keymap.set('n', '<leader>gfm', ':Pick git_files scope="modified"<cr>', { desc = 'Git files modified' })
+vim.keymap.set('n', '<leader>gfm', ':Pick git_files scope="untracked"<cr>', { desc = 'Git files untracked' })
+vim.keymap.set('n', '<leader>gff', ':Pick git_files scope="tracked"<cr>', { desc = 'Git files tracked' })
+vim.keymap.set('n', '<leader>gfi', ':Pick git_files scope="ignored"<cr>', { desc = 'Git files ignored' })
+vim.keymap.set('n', '<leader>gfd', ':Pick git_files scope="deleted"<cr>', { desc = 'Git files deleted' })
 
 vim.keymap.set('n', '<leader>yr', ':Pick registers<cr>', { desc = 'Yank register' })
 

@@ -64,6 +64,7 @@ miniclue.setup {
     { mode = 'n', keys = '<leader>e', desc = '+Errors' },
     { mode = 'n', keys = '<leader>f', desc = '+Files' },
     { mode = 'n', keys = '<leader>g', desc = '+Git' },
+    { mode = 'n', keys = '<leader>gf', desc = '+Files' },
     { mode = 'n', keys = '<leader>h', desc = '+Help' },
     { mode = 'n', keys = '<leader>j', desc = '+Jump' },
     { mode = 'n', keys = '<leader>m', desc = '+Move' },
