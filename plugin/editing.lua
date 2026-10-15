@@ -12,9 +12,17 @@ require('mini.completion').setup {
 require('mini.jump').setup()
 
 local jump2d = require 'mini.jump2d'
-jump2d.setup()
+jump2d.setup {
+  mappings = {
+    start_jumping = '',
+  },
+}
 
-vim.keymap.set({ 'n', 'x', 'o' }, '<cr>', function()
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>jl', function()
+  jump2d.start(jump2d.builtin_opts.line_start)
+end, { desc = 'Jump to line' })
+
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>jj', function()
   local gen_spotter = jump2d.gen_spotter
   local function jump_to_word()
     local res = {

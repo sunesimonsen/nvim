@@ -6,8 +6,8 @@ require('project').setup {
 
 local MiniPick = require 'mini.pick'
 MiniPick.setup()
-require('mini.extra').setup()
 
+require('mini.extra').setup()
 require('mini.visits').setup()
 
 local paths = require 'custom.paths'
