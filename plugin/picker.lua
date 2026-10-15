@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>*', ":Pick grep pattern='<cword>'<cr>", { desc = 'S
 vim.keymap.set('n', "<leader>'", ':Pick resume<cr>', { desc = 'Search resume' })
 
 vim.keymap.set('n', '<leader>bb', ':Pick buffers<cr>', { desc = 'Find existing buffers' })
-vim.keymap.set('n', '<leader>fr', ':Pick visit_paths cwd=""<cr>', { desc = 'Search recent files' })
+vim.keymap.set('n', '<leader>fr', ':Pick visit_paths recency_weight=1<cr>', { desc = 'Search recent files' })
 
 vim.keymap.set('n', '<leader>es', ':Pick diagnostic<cr>', { desc = 'Search diagnostics' })
 
