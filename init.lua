@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add {
   -- Everything from mini.nvim
-  { src = 'https://github.com/nvim-mini/mini.nvim', version = 'v0.18.0' },
+  { src = 'https://github.com/nvim-mini/mini.nvim', version = '8831fa150fa26492cfe135801fa498132f1491d2' },
 
   -- Projects
   { src = 'https://github.com/DrKJeff16/project.nvim', version = 'v5.1.1-1' },

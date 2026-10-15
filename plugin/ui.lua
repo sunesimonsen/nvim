@@ -5,7 +5,7 @@ require('mini.statusline').setup {
 }
 
 require('mini.notify').setup()
-require('mini.tabline').setup()
+require('mini.input').setup()
 
 -- Make line numbers default
 vim.opt.number = false

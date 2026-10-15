@@ -30,9 +30,9 @@
       "version": "'v2.2.1'"
     },
     "mini.nvim": {
-      "rev": "a995fe9cd4193fb492b5df69175a351a74b3d36b",
+      "rev": "8831fa150fa26492cfe135801fa498132f1491d2",
       "src": "https://github.com/nvim-mini/mini.nvim",
-      "version": "'v0.18.0'"
+      "version": "'8831fa150fa26492cfe135801fa498132f1491d2'"
     },
     "notes.nvim": {
       "rev": "a24bc22ef9f0d51292eb7b71d3030854b4a15485",
