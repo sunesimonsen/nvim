@@ -8,6 +8,8 @@ local MiniPick = require 'mini.pick'
 MiniPick.setup()
 require('mini.extra').setup()
 
+require('mini.visits').setup()
+
 local paths = require 'custom.paths'
 
 vim.keymap.set('n', '<leader>*', ":Pick grep pattern='<cword>'<cr>", { desc = 'Search current word' })
@@ -15,6 +17,7 @@ vim.keymap.set('n', "<leader>'", ':Pick resume<cr>', { desc = 'Search resume' })
 
 vim.keymap.set('n', '<leader>bb', ':Pick buffers<cr>', { desc = 'Find existing buffers' })
 vim.keymap.set('n', '<leader>fr', ':Pick visit_paths recency_weight=1<cr>', { desc = 'Search recent files' })
+vim.keymap.set('n', '<leader>fR', ':Pick visit_paths cwd="" recency_weight=1<cr>', { desc = 'Search recent files (globally)' })
 
 vim.keymap.set('n', '<leader>es', ':Pick diagnostic<cr>', { desc = 'Search diagnostics' })
 

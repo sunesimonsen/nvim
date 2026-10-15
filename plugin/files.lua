@@ -1,5 +1,4 @@
 require('oil').setup()
-require('mini.visits').setup()
 local paths = require 'custom.paths'
 
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = 'Save file' })
