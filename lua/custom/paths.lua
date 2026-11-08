@@ -18,4 +18,9 @@ M.get_git_path = function()
   end
 end
 
+M.get_git_dir_name = function()
+  local git_path = M.get_git_path()
+  return vim.fn.fnamemodify(git_path, ':t')
+end
+
 return M
