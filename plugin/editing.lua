@@ -1,13 +1,21 @@
 vim.opt.swapfile = false
 
 require('mini.completion').setup {
-  delay = { info = 500, signature = 500 },
+  delay = { completion = 100, info = 500, signature = 500 },
   lsp_completion = {
     snippet_insert = function(snippet)
       vim.snippet.expand(snippet)
     end,
   },
 }
+
+-- Longer completion delay for prose buffers so typing text doesn't trigger popups
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'markdown', 'text', 'gitcommit' },
+  callback = function(args)
+    vim.b[args.buf].minicompletion_config = { delay = { completion = math.huge } }
+  end,
+})
 
 require('mini.splitjoin').setup()
 require('mini.jump').setup()
